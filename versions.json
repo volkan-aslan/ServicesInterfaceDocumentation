@@ -1,5 +1,12 @@
 [
   {
+    "version": "R5.2",
+    "title": "R5.2",
+    "aliases": [
+      "stable"
+    ]
+  },
+  {
     "version": "master",
     "title": "master",
     "aliases": [
