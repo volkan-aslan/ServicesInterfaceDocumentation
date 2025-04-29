@@ -1,0 +1,3356 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://volkan-aslan.github.io/ServicesInterfaceDocumentation/master/api/Store2API/">
+      
+      
+        <link rel="prev" href="../SourceAPI/">
+      
+      
+        <link rel="next" href="../StreamerAPI/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Store2 API - Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#store2-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Store2 API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Thunder
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Thunder
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thunder/ControllerPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Controller Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Interfaces
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AmazonPrimeAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AmazonPrime API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ApplicationAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AudioStreamAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AudioStream API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AVSControllerAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AVSController API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BluetoothControlAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BluetoothControl API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BluetoothRemoteControlAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BluetoothRemoteControl API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BrowserCookieJarAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BrowserCookieJar API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BrowserResourcesAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BrowserResources API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BrowserScriptingAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BrowserScripting API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BrowserSecurityAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BrowserSecurity API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ConnectionPropertiesAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConnectionProperties API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ContentProtectionAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ContentProtection API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CustomerCareOperationsAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomerCareOperations API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DeviceIdentificationAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DeviceIdentification API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DictionaryAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionary API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DisplayPropertiesAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DisplayProperties API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FirmwareControlAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firmware Control API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GraphicsPropertiesAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GraphicsProperties API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../HDRPropertiesAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HDRProperties API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IOConnectorAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IOConnector API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LanguageTagAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LanguageTag API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LocationSyncAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LocationSync API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MathAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Math API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MemoryMonitorAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MemoryMonitor API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MessageControlAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MessageControl API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MessengerAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Messenger API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MonitorAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitor API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NetworkControlAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NetworkControl API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NetworkToolsAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NetworkTools API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenCDMAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenCDM API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OutputAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Output API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PackageManagerAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PackageManager API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PackagerAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packager API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PertsistentStoreAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PertsistentStore API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PlayerPropertiesAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PlayerProperties API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PowerAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Power API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ScriptEngineAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ScriptEngine API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SecureShellServerAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SecureShell Server API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SecurityAgentAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SecurityAgent API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SinkAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sink API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SourceAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Source API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Store2 API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Store2 API
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../StreamerAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streamer API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SystemCommandsAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SystemCommands API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TimeSyncAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TimeSync API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TimeZoneAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TimeZone API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../USBHubAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    USBHub API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ValuePointAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ValuePoint API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../VolumeControlAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    VolumeControl API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WatchDogAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WatchDog API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WebBrowserAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WebBrowser API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WebBrowserExtAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WebBrowserExt API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WifiControlAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WifiControl API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ZigWaveAPI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ZigWave API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Plugins
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/AVSPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AVS Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/BackOfficePlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BackOffice Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/BluetoothAudioPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bluetooth Audio Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/BluetoothControlPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bluetooth Control Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/BluetoothRemoteControlPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bluetooth Remote Control Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/BluetoothSDPServerPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Bluetooth SDP Server Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/CobaltPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cobalt Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/CommanderPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Commander Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/CompositorPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Compositor Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/ContainersPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Containers Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/DeviceIdentificationPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Device Identification Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/DeviceInfoPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Device Info Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/DHCPServerPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DHCP Server Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/DIALServerPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DIAL Server Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/DictionaryPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dictionary Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/DisplayInfoPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Display Info Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/DoggoPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Doggo Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/FileTransferPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FileTransfer Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/FirmwareControlPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Firmware Control Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/IOConnectorPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IO Connector Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/LocationSyncPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Location Sync Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/MessageControlPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MessageControl Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/MessengerPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Messenger Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/MonitorPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitor Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/NetworkControlPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Network Control Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/OpenCDMiPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OpenCDMi Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/PackagerPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Packager Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/PerformanceMetricsPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PerformanceMetrics Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/PerformanceMonitorPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Performance Monitor Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/PlayerInfoPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Player Info Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/PowerPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Power Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/ProcessMonitorPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ProcessMonitor Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/RemoteControlPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Remote Control Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/ResourceMonitorPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ResourceMonitor Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/SecurityAgentPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Agent Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/SparkPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Spark Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/StreamerPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streamer Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/SubsystemControlPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Subsystem Control Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/SystemCommandsPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Commands Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/TimeSyncPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Time Sync Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/VolumeControlPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Volume Control Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/WebKitBrowserPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WebKit Browser Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/WebPAPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    WebPA Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugins/WifiControlPlugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wifi Control Plugin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<!-- Generated automatically, DO NOT EDIT! -->
+<p><a id="head_Store2_API"></a></p>
+<h1 id="store2-api">Store2 API</h1>
+<p><strong>Version: 1.0.0</strong></p>
+<p><strong>Status: <img alt="⚫" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26ab.svg" title=":black_circle:" /><img alt="⚪" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26aa.svg" title=":white_circle:" /><img alt="⚪" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26aa.svg" title=":white_circle:" /></strong></p>
+<p>Store2 interface for Thunder framework.</p>
+<p>(Defined with IStore2 in <a href="https://github.com/rdkcentral/ThunderInterfaces/blob/master/interfaces/IStore2.h">IStore2.h</a>)</p>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+<li><a href="#head_Introduction">Introduction</a></li>
+<li><a href="#head_Description">Description</a></li>
+<li><a href="#head_Methods">Methods</a></li>
+<li><a href="#head_Notifications">Notifications</a></li>
+</ul>
+<p><a id="head_Introduction"></a></p>
+<h1 id="introduction">Introduction</h1>
+<p><a id="head_Scope"></a></p>
+<h2 id="scope">Scope</h2>
+<p>This document describes purpose and functionality of the Store2 interface (version 1.0.0). It includes detailed specification about its methods provided and notifications sent.</p>
+<p><a id="head_Case_Sensitivity"></a></p>
+<h2 id="case-sensitivity">Case Sensitivity</h2>
+<p>All identifiers of the interfaces described in this document are case-sensitive. Thus, unless stated otherwise, all keywords, entities, properties, relations and actions should be treated as such.</p>
+<p><a id="head_Acronyms,_Abbreviations_and_Terms"></a></p>
+<h2 id="acronyms-abbreviations-and-terms">Acronyms, Abbreviations and Terms</h2>
+<p>The table below provides and overview of acronyms used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Acronym</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a name="acronym.API">API</a></td>
+<td style="text-align: left;">Application Programming Interface</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="acronym.HTTP">HTTP</a></td>
+<td style="text-align: left;">Hypertext Transfer Protocol</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="acronym.JSON">JSON</a></td>
+<td style="text-align: left;">JavaScript Object Notation; a data interchange format</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="acronym.JSON-RPC">JSON-RPC</a></td>
+<td style="text-align: left;">A remote procedure call protocol encoded in JSON</td>
+</tr>
+</tbody>
+</table>
+<p>The table below provides and overview of terms and abbreviations used in this document and their definitions.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a name="term.callsign">callsign</a></td>
+<td style="text-align: left;">The name given to an instance of a plugin. One plugin can be instantiated multiple times, but each instance the instance name, callsign, must be unique.</td>
+</tr>
+</tbody>
+</table>
+<p><a id="head_References"></a></p>
+<h2 id="references">References</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Ref ID</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a name="ref.HTTP"><a href="http://www.w3.org/Protocols">HTTP</a></a></td>
+<td style="text-align: left;">HTTP specification</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="ref.JSON-RPC"><a href="https://www.jsonrpc.org/specification">JSON-RPC</a></a></td>
+<td style="text-align: left;">JSON-RPC 2.0 specification</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="ref.JSON"><a href="http://www.json.org/">JSON</a></a></td>
+<td style="text-align: left;">JSON specification</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a name="ref.Thunder"><a href="https://github.com/WebPlatformForEmbedded/Thunder/blob/master/doc/WPE%20-%20API%20-%20Thunder.docx">Thunder</a></a></td>
+<td style="text-align: left;">Thunder API Reference</td>
+</tr>
+</tbody>
+</table>
+<p><a id="head_Description"></a></p>
+<h1 id="description">Description</h1>
+<p>Store2 JSON-RPC interface.</p>
+<p><a id="head_Methods"></a></p>
+<h1 id="methods">Methods</h1>
+<p>The following methods are provided by the Store2 interface:</p>
+<p>Store2 interface methods:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#method_setValue">setValue</a> / <a href="#method_setValue">setValue</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#method_getValue">getValue</a> / <a href="#method_getValue">getValue</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#method_deleteKey">deleteKey</a> / <a href="#method_deleteKey">deleteKey</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="#method_deleteNamespace">deleteNamespace</a> / <a href="#method_deleteNamespace">deleteNamespace</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><a id="method_setValue"></a></p>
+<h2 id="setvalue-method"><em>setValue <a href="#head_Methods"><sup>method</sup></a></em></h2>
+<blockquote>
+<p><code>setValue</code> is an alternative name for this method.</p>
+</blockquote>
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">M/O</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">params</td>
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.scope</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em> (must be one of the following: <em>account, device</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">params.namespace</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.key</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.value</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.ttl</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="result">Result</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">M/O</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">result</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example">Example</h3>
+<h4 id="request">Request</h4>
+<pre><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 42,
+  &quot;method&quot;: &quot;Store2.1.setValue&quot;,
+  &quot;params&quot;: {
+    &quot;scope&quot;: &quot;account&quot;,
+    &quot;namespace&quot;: &quot;...&quot;,
+    &quot;key&quot;: &quot;...&quot;,
+    &quot;value&quot;: &quot;...&quot;,
+    &quot;ttl&quot;: 0
+  }
+}
+</code></pre>
+<h4 id="response">Response</h4>
+<pre><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 42,
+  &quot;result&quot;: null
+}
+</code></pre>
+<p><a id="method_getValue"></a></p>
+<h2 id="getvalue-method"><em>getValue <a href="#head_Methods"><sup>method</sup></a></em></h2>
+<blockquote>
+<p><code>getValue</code> is an alternative name for this method.</p>
+</blockquote>
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">M/O</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">params</td>
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.scope</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em> (must be one of the following: <em>account, device</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">params.namespace</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.key</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_1">Result</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">M/O</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">result</td>
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">result.value</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">result.ttl</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_1">Example</h3>
+<h4 id="request_1">Request</h4>
+<pre><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 42,
+  &quot;method&quot;: &quot;Store2.1.getValue&quot;,
+  &quot;params&quot;: {
+    &quot;scope&quot;: &quot;account&quot;,
+    &quot;namespace&quot;: &quot;...&quot;,
+    &quot;key&quot;: &quot;...&quot;
+  }
+}
+</code></pre>
+<h4 id="response_1">Response</h4>
+<pre><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 42,
+  &quot;result&quot;: {
+    &quot;value&quot;: &quot;...&quot;,
+    &quot;ttl&quot;: 0
+  }
+}
+</code></pre>
+<p><a id="method_deleteKey"></a></p>
+<h2 id="deletekey-method"><em>deleteKey <a href="#head_Methods"><sup>method</sup></a></em></h2>
+<blockquote>
+<p><code>deleteKey</code> is an alternative name for this method.</p>
+</blockquote>
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">M/O</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">params</td>
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.scope</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em> (must be one of the following: <em>account, device</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">params.namespace</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.key</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_2">Result</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">M/O</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">result</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_2">Example</h3>
+<h4 id="request_2">Request</h4>
+<pre><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 42,
+  &quot;method&quot;: &quot;Store2.1.deleteKey&quot;,
+  &quot;params&quot;: {
+    &quot;scope&quot;: &quot;account&quot;,
+    &quot;namespace&quot;: &quot;...&quot;,
+    &quot;key&quot;: &quot;...&quot;
+  }
+}
+</code></pre>
+<h4 id="response_2">Response</h4>
+<pre><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 42,
+  &quot;result&quot;: null
+}
+</code></pre>
+<p><a id="method_deleteNamespace"></a></p>
+<h2 id="deletenamespace-method"><em>deleteNamespace <a href="#head_Methods"><sup>method</sup></a></em></h2>
+<blockquote>
+<p><code>deleteNamespace</code> is an alternative name for this method.</p>
+</blockquote>
+<h3 id="parameters_3">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">M/O</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">params</td>
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.scope</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em> (must be one of the following: <em>account, device</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">params.namespace</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="result_3">Result</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">M/O</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">result</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;">Always null</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_3">Example</h3>
+<h4 id="request_3">Request</h4>
+<pre><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 42,
+  &quot;method&quot;: &quot;Store2.1.deleteNamespace&quot;,
+  &quot;params&quot;: {
+    &quot;scope&quot;: &quot;account&quot;,
+    &quot;namespace&quot;: &quot;...&quot;
+  }
+}
+</code></pre>
+<h4 id="response_3">Response</h4>
+<pre><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 42,
+  &quot;result&quot;: null
+}
+</code></pre>
+<p><a id="head_Notifications"></a></p>
+<h1 id="notifications">Notifications</h1>
+<p>Notifications are autonomous events triggered by the internals of the implementation and broadcasted via JSON-RPC to all registered observers. Refer to [<a href="#ref.Thunder">Thunder</a>] for information on how to register for a notification.</p>
+<p>The following events are provided by the Store2 interface:</p>
+<p>Store2 interface events:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Notification</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="#notification_valueChanged">valueChanged</a> / <a href="#notification_valueChanged">onValueChanged</a></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p><a id="notification_valueChanged"></a></p>
+<h2 id="valuechanged-notification"><em>valueChanged <a href="#head_Notifications"><sup>notification</sup></a></em></h2>
+<blockquote>
+<p><code>onValueChanged</code> is an alternative name for this notification.</p>
+</blockquote>
+<h3 id="notification-parameters">Notification Parameters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">M/O</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">params</td>
+<td style="text-align: left;">object</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.scope</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em> (must be one of the following: <em>account, device</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">params.namespace</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.key</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+<tr>
+<td style="text-align: left;">params.value</td>
+<td style="text-align: left;">string</td>
+<td style="text-align: left;">mandatory</td>
+<td style="text-align: left;"><em>...</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="example_4">Example</h3>
+<h4 id="registration">Registration</h4>
+<pre><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;id&quot;: 42,
+  &quot;method&quot;: &quot;Store2.1.register&quot;,
+  &quot;params&quot;: {
+    &quot;event&quot;: &quot;valueChanged&quot;,
+    &quot;id&quot;: &quot;myid&quot;
+  }
+}
+</code></pre>
+<h4 id="notification">Notification</h4>
+<pre><code class="language-json">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;method&quot;: &quot;myid.valueChanged&quot;,
+  &quot;params&quot;: {
+    &quot;scope&quot;: &quot;account&quot;,
+    &quot;namespace&quot;: &quot;...&quot;,
+    &quot;key&quot;: &quot;...&quot;,
+    &quot;value&quot;: &quot;...&quot;
+  }
+}
+</code></pre>
+<blockquote>
+<p>The <em>client ID</em> parameter is passed within the notification designator, i.e. <code>&lt;client-id&gt;.valueChanged</code>.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
