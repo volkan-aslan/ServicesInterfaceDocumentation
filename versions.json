@@ -2,6 +2,11 @@
   {
     "version": "R5.2",
     "title": "R5.2",
+    "aliases": []
+  },
+  {
+    "version": "R5.1",
+    "title": "R5.1",
     "aliases": [
       "stable"
     ]
