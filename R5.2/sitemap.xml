@@ -29,6 +29,10 @@
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/BrowserAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
          <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/BrowserCookieJarAPI/</loc>
          <lastmod>2025-05-06</lastmod>
     </url>
@@ -45,6 +49,18 @@
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/ButlerAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/CobaltAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/CompositorAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
          <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/ConnectionPropertiesAPI/</loc>
          <lastmod>2025-05-06</lastmod>
     </url>
@@ -57,7 +73,23 @@
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/DHCPServerAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/DIALServerAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/DTVAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
          <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/DeviceIdentificationAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/DeviceInfoAPI/</loc>
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
@@ -82,6 +114,14 @@
     </url>
     <url>
          <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/IOConnectorAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/InputSwitchAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/LISAAPI/</loc>
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
@@ -113,6 +153,10 @@
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/NetflixAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
          <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/NetworkControlAPI/</loc>
          <lastmod>2025-05-06</lastmod>
     </url>
@@ -122,6 +166,10 @@
     </url>
     <url>
          <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/OpenCDMAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/OpenCDMiAPI/</loc>
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
@@ -137,11 +185,31 @@
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/PerformanceMonitorAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
          <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/PertsistentStoreAPI/</loc>
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
          <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/PlayerPropertiesAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/PowerAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/ProcessContainers/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/ProvisioningAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/RemoteControlAPI/</loc>
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
@@ -165,11 +233,27 @@
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/StateControlAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
          <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/Store2API/</loc>
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
          <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/StreamerAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/SubsystemControlAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/SystemCommandsAPI/</loc>
+         <lastmod>2025-05-06</lastmod>
+    </url>
+    <url>
+         <loc>https://volkan-aslan.github.io/ServicesInterfaceDocumentation/R5.2/api/TimeSyncAPI/</loc>
          <lastmod>2025-05-06</lastmod>
     </url>
     <url>
